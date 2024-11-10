@@ -47,3 +47,16 @@ That will output basic information about the issues to the command line.
 To make the application easier to debug, runtime configurations are provided to run each of the analyses you are implementing. When you click on the run button in the left-hand side toolbar, you can select to run one of the three analyses or run the file you are currently viewing. That makes debugging a little easier. This run configuration is specified in the `.vscode/launch.json` if you want to modify it.
 
 The `.vscode/settings.json` also customizes the VSCode user interface sligthly to make navigation and debugging easier. But that is a matter of preference and can be turned off by removing the appropriate settings.
+
+## Feature 1 - Montly Issue Analyser
+The Monthly Issue Analyser is a feature that can be used to analyze the count of issues created each month, this is based on created_date field in poerty_issues.json file. This functionality takes 4 digit year as input and generates the bar graph that depicts the count of issues created for each month in that specified year. If input is blank then it aggregates the data across all years avaialble in poerty_issues.json file and plots the bar graph.
+
+## To run the Monthly Issue Analyser
+
+```
+python run.py --feature 1
+```
+This will ask for 4 digit year input when run in the terminal.
+
+
+
