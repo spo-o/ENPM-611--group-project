@@ -27,7 +27,7 @@ class DataLoader:
         global _ISSUES # to access it within the function
         if _ISSUES is None:
             _ISSUES = self._load()
-            #print(f'Loaded {len(_ISSUES)} issues from {self.data_path}.')
+            print(f'Loaded {len(_ISSUES)} issues from {self.data_path}.')
         return _ISSUES
     
     def _load(self):

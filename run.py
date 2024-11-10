@@ -9,8 +9,6 @@ import argparse
 
 import config
 from example_analysis import ExampleAnalysis
-from first_feature import MonthlyIssueAnalyser
-
 
 
 def parse_args():
@@ -50,19 +48,7 @@ config.overwrite_from_args(args)
 if args.feature == 0:
     ExampleAnalysis().run()
 elif args.feature == 1:
-    # Ask the user to input a four-digit year
-    year_input = input("Please enter a four-digit year (e.g., 2023) to filter issues, or leave blank for all years: ")
-    
-    # Validate the input to ensure it's a four-digit number or blank
-    # Check if input is a valid 4-digit number
-    if year_input == "":
-        year = None
-    elif not year_input.isdigit() or len(year_input) != 4:
-        raise ValueError("Invalid input. Please enter a 4-digit year.")
-    else:
-        year = int(year_input)
-
-    MonthlyIssueAnalyser(year=year).analyse()
+    pass # TODO call first analysis
 elif args.feature == 2:
     pass # TODO call second analysis
 elif args.feature == 3:
