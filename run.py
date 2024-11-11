@@ -11,8 +11,7 @@ import config
 from example_analysis import ExampleAnalysis
 from first_feature import MonthlyIssueAnalyser
 from feature_2 import TopLabelsAnalyzer
-
-
+from feature_3 import UserAnalyzer
 
 def parse_args():
     """
@@ -69,6 +68,10 @@ elif args.feature == 2:
     label = label_input if label_input else None
     TopLabelsAnalyzer(label=label).analyse()
 elif args.feature == 3:
-    pass # TODO call third analysis
+    user_name = args.user if args.user else input("Enter the user name to analyze their issues: ")
+    if user_name:
+        UserAnalyzer().user_issue_count(user_name)
+    else:
+        print("User name is required for this analysis")
 else:
     print('Need to specify which feature to run with --feature flag.')

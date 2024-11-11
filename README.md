@@ -72,3 +72,19 @@ python run.py --feature 2
 ```
 This will need a string as a input for searching lables in the dataset.
 
+## Feature 3 - User-Specific Issue Contribution Analyzer
+
+The User-Specific Issue Contribution Analyzer is a feature designed to track and display the contributions of a specific user within the poetry_issues.json file. It provides insights into:
+
+The number of issues created by a specific user.
+The creation dates of these issues.
+The labels associated with each issue created by the user.
+This feature is particularly useful for project managers and team leads who need to assess individual contributions over the course of a project.
+
+## To run the Monthly Issue Analyser
+
+```
+python run.py --feature 3
+```
+This will need a string as a input that is User name.
+
