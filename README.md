@@ -1,6 +1,6 @@
-# ENPM611 Project Application Template
+# ENPM611 Project Application
 
-This is the template for the ENPM611 class project. Use this template in conjunction with the provided data to implement an application that analyzes GitHub issues for the [poetry](https://github.com/python-poetry/poetry/issues) Open Source project and generates interesting insights.
+This template is designed for the ENPM611 class project, where we have analyzed four key issues from the poetry_issues.json file. This analysis provides insights into the types of issues in the file, which could aid in understanding patterns or trends within the [poetry](https://github.com/python-poetry/poetry/issues) project on GitHub.
 
 This application template implements some of the basic functions:
 
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ### Download and configure the data file
 
-Download the data file (in `json` format) from the project assignment in Canvas and update the `config.json` with the path to the file. Note, you can also specify an environment variable by the same name as the config setting (`ENPM611_PROJECT_DATA_PATH`) to avoid committing your personal path to the repository.
+The poetry_issues.json file is included in the repository. To use it, simply configure the relative path to this file in the config.json file. This allows the application to locate the data file without specifying any absolute paths or environment variables.
 
 
 ### Run an analysis
@@ -47,3 +47,47 @@ That will output basic information about the issues to the command line.
 To make the application easier to debug, runtime configurations are provided to run each of the analyses you are implementing. When you click on the run button in the left-hand side toolbar, you can select to run one of the three analyses or run the file you are currently viewing. That makes debugging a little easier. This run configuration is specified in the `.vscode/launch.json` if you want to modify it.
 
 The `.vscode/settings.json` also customizes the VSCode user interface sligthly to make navigation and debugging easier. But that is a matter of preference and can be turned off by removing the appropriate settings.
+
+## Feature 1 - Montly Issue Analyser
+The Monthly Issue Analyser is a feature that can be used to analyze the count of issues created each month, this is based on created_date field in poerty_issues.json file. This functionality takes 4 digit year as input and generates the bar graph that depicts the count of issues created for each month in that specified year. If input is blank then it aggregates the data across all years avaialble in poerty_issues.json file and plots the bar graph.
+
+## To run the Monthly Issue Analyser
+
+```
+python run.py --feature 1
+```
+This will ask for 4 digit year input when run in the terminal.
+
+## Feature 2 - Top Labels Analyzer
+The Top Labels Analyzer is a feature that can be used to analyze and visualize the usage of labels in poerty_issues.json file. This functionality allows users to either: -> Search for a specific label by providing its label as input, or -> View the top 50 labels used in the issues if no specific label is provided. The analysis is based on the labels field of the issues in the dataset, and the results are visualized in the form of a bar chart.
+
+## To run Top Labels Analyzer
+
+```
+python run.py --feature 2
+```
+This will need a string as a input for searching lables in the dataset.
+
+## Feature 3 - User-Specific Issue Contribution Analyzer
+The User-Specific Issue Contribution Analyzer is a feature designed to track and display the contributions of a specific user within the poetry_issues.json file. It provides insights into:
+
+The number of issues created by a specific user. The creation dates of these issues. The labels associated with each issue created by the user. This feature is particularly useful for project managers and team leads who need to assess individual contributions over the course of a project.
+
+## To run the User-Specific Issue Contribution Analyzer
+
+```
+python run.py --feature 3
+```
+This will need a string as a input that is User name.
+
+## Feature 4 - Event Activity Analysis
+The EventAnalysis feature provides a visual representation of event occurrences over time based on data extracted from the issues. This feature is designed to support temporal analysis of events, allowing users to identify trends and frequency of occurrences over specific periods.
+
+## To run the Event Activity Analysis
+
+```
+python run.py --feature 4
+```
+
+The application provides insights that help identify and understand patterns in reported issues.
+
