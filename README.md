@@ -59,4 +59,16 @@ python run.py --feature 1
 This will ask for 4 digit year input when run in the terminal.
 
 
+## Feature 2 - Top Labels Analyzer
+The Top Labels Analyzer is a feature that can be used to analyze and visualize the usage of labels in  poerty_issues.json file. This functionality allows users to either:
+-> Search for a specific label by providing its label as input, or
+-> View the top 50 labels used in the issues if no specific label is provided.
+The analysis is based on the labels field of the issues in the dataset, and the results are visualized in the form of a bar chart.
+
+## To run the Monthly Issue Analyser
+
+```
+python run.py --feature 2
+```
+This will need a string as a input for searching lables in the dataset.
 

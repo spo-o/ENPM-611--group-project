@@ -10,6 +10,7 @@ import argparse
 import config
 from example_analysis import ExampleAnalysis
 from first_feature import MonthlyIssueAnalyser
+from feature_2 import TopLabelsAnalyzer
 
 
 
@@ -64,7 +65,9 @@ elif args.feature == 1:
 
     MonthlyIssueAnalyser(year=year).analyse()
 elif args.feature == 2:
-    pass # TODO call second analysis
+    label_input = input("Enter a specific label to analyze or leave blank for the top 50 labels: ").strip()
+    label = label_input if label_input else None
+    TopLabelsAnalyzer(label=label).analyse()
 elif args.feature == 3:
     pass # TODO call third analysis
 else:
