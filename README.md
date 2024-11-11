@@ -58,8 +58,12 @@ python run.py --feature 1
 ```
 This will ask for 4 digit year input when run in the terminal.
 
+
 ## Feature 2 - Top Labels Analyzer
-The Top Labels Analyzer is a feature that can be used to analyze and visualize the usage of labels in poerty_issues.json file. This functionality allows users to either: -> Search for a specific label by providing its label as input, or -> View the top 50 labels used in the issues if no specific label is provided. The analysis is based on the labels field of the issues in the dataset, and the results are visualized in the form of a bar chart.
+The Top Labels Analyzer is a feature that can be used to analyze and visualize the usage of labels in  poerty_issues.json file. This functionality allows users to either:
+-> Search for a specific label by providing its label as input, or
+-> View the top 50 labels used in the issues if no specific label is provided.
+The analysis is based on the labels field of the issues in the dataset, and the results are visualized in the form of a bar chart.
 
 ## To run Top Labels Analyzer
 
@@ -68,10 +72,15 @@ python run.py --feature 2
 ```
 This will need a string as a input for searching lables in the dataset.
 
+
 ## Feature 3 - User-Specific Issue Contribution Analyzer
+
 The User-Specific Issue Contribution Analyzer is a feature designed to track and display the contributions of a specific user within the poetry_issues.json file. It provides insights into:
 
-The number of issues created by a specific user. The creation dates of these issues. The labels associated with each issue created by the user. This feature is particularly useful for project managers and team leads who need to assess individual contributions over the course of a project.
+The number of issues created by a specific user.
+The creation dates of these issues.
+The labels associated with each issue created by the user.
+This feature is particularly useful for project managers and team leads who need to assess individual contributions over the course of a project.
 
 ## To run the User-Specific Issue Contribution Analyzer
 
@@ -80,13 +89,16 @@ python run.py --feature 3
 ```
 This will need a string as a input that is User name.
 
+
 ## Feature 4 - Event Activity Analysis
+
 The EventAnalysis feature provides a visual representation of event occurrences over time based on data extracted from the issues. This feature is designed to support temporal analysis of events, allowing users to identify trends and frequency of occurrences over specific periods.
 
 ## To run the Event Activity Analysis
 
 ```
 python run.py --feature 4
+
 ```
 
 The application provides insights that help identify and understand patterns in reported issues.
