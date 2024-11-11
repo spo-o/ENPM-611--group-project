@@ -12,6 +12,7 @@ from example_analysis import ExampleAnalysis
 from first_feature import MonthlyIssueAnalyser
 from feature_2 import TopLabelsAnalyzer
 from feature_3 import UserAnalyzer
+from feature_4 import EventAnalysis
 
 def parse_args():
     """
@@ -73,5 +74,7 @@ elif args.feature == 3:
         UserAnalyzer().user_issue_count(user_name)
     else:
         print("User name is required for this analysis")
+elif args.feature == 4:
+    EventAnalysis().run()
 else:
     print('Need to specify which feature to run with --feature flag.')
