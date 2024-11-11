@@ -1,6 +1,6 @@
-# ENPM611 Project Application Template
+# ENPM611 Project Application
 
-This is the template for the ENPM611 class project. Use this template in conjunction with the provided data to implement an application that analyzes GitHub issues for the [poetry](https://github.com/python-poetry/poetry/issues) Open Source project and generates interesting insights.
+This template is designed for the ENPM611 class project, where we have analyzed four key issues from the poetry_issues.json file. This analysis provides insights into the types of issues in the file, which could aid in understanding patterns or trends within the [poetry](https://github.com/python-poetry/poetry/issues) project on GitHub.
 
 This application template implements some of the basic functions:
 
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ### Download and configure the data file
 
-Download the data file (in `json` format) from the project assignment in Canvas and update the `config.json` with the path to the file. Note, you can also specify an environment variable by the same name as the config setting (`ENPM611_PROJECT_DATA_PATH`) to avoid committing your personal path to the repository.
+The poetry_issues.json file is included in the repository. To use it, simply configure the relative path to this file in the config.json file. This allows the application to locate the data file without specifying any absolute paths or environment variables.
 
 
 ### Run an analysis
@@ -72,6 +72,7 @@ python run.py --feature 2
 ```
 This will need a string as a input for searching lables in the dataset.
 
+
 ## Feature 3 - User-Specific Issue Contribution Analyzer
 
 The User-Specific Issue Contribution Analyzer is a feature designed to track and display the contributions of a specific user within the poetry_issues.json file. It provides insights into:
@@ -88,6 +89,7 @@ python run.py --feature 3
 ```
 This will need a string as a input that is User name.
 
+
 ## Feature 4 - Event Activity Analysis
 
 The EventAnalysis feature provides a visual representation of event occurrences over time based on data extracted from the issues. This feature is designed to support temporal analysis of events, allowing users to identify trends and frequency of occurrences over specific periods.
@@ -96,4 +98,8 @@ The EventAnalysis feature provides a visual representation of event occurrences 
 
 ```
 python run.py --feature 4
+
 ```
+
+The application provides insights that help identify and understand patterns in reported issues.
+
