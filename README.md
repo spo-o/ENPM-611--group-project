@@ -65,7 +65,7 @@ The Top Labels Analyzer is a feature that can be used to analyze and visualize t
 -> View the top 50 labels used in the issues if no specific label is provided.
 The analysis is based on the labels field of the issues in the dataset, and the results are visualized in the form of a bar chart.
 
-## To run the Monthly Issue Analyser
+## To run Top Labels Analyzer
 
 ```
 python run.py --feature 2
@@ -81,10 +81,19 @@ The creation dates of these issues.
 The labels associated with each issue created by the user.
 This feature is particularly useful for project managers and team leads who need to assess individual contributions over the course of a project.
 
-## To run the Monthly Issue Analyser
+## To run the User-Specific Issue Contribution Analyzer
 
 ```
 python run.py --feature 3
 ```
 This will need a string as a input that is User name.
 
+## Feature 4 - Event Activity Analysis
+
+The EventAnalysis feature provides a visual representation of event occurrences over time based on data extracted from the issues. This feature is designed to support temporal analysis of events, allowing users to identify trends and frequency of occurrences over specific periods.
+
+## To run the Event Activity Analysis
+
+```
+python run.py --feature 4
+```
